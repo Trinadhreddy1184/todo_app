@@ -3,7 +3,6 @@
 * You can checkout the app using the link.[Click here](https://drive.google.com/file/d/1n3mXDZpceT88OGURXGPKRfzVyxVzYBT0/view?usp=sharing)
 * Below are the screenshots of the app.
 <p align="center">
-  <img src="../master/Screenshots/1.jpg" width="350">
-  <img src="../master/Screenshots/2.jpg" width="350">
- 
+  <img src="../master/screenshots/1.png" width="750">
+  <img src="../master/screenshots/2.jpg" width="350">
 </p>
