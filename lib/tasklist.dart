@@ -10,9 +10,10 @@ class TaskList extends ChangeNotifier{
     //notifyListeners();
     return tasks.length;
   }
-  updatetask(){
-    FirebaseFirestore.instance.collection("todos").get().then((querySnapshot) {
+  updatetask()async{
+    await FirebaseFirestore.instance.collection("todos").get().then((querySnapshot) {
       querySnapshot.docs.forEach((result) {
+        tasks={};
         result.data().forEach((key, value) {tasks[key]=value;});
       });
       print(tasks);
@@ -40,7 +41,7 @@ class TaskList extends ChangeNotifier{
     List keys= tasks.keys.toList();
     List values =tasks.values.toList();
     keys[index]=newname;
-    tasks.clear();
+    //tasks.clear();
     tasks=Map.fromIterables(keys, values);
     Fire().renamemap(tasks);
     notifyListeners();
